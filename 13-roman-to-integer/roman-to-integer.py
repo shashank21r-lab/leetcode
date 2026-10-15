@@ -13,10 +13,10 @@ class Solution(object):
             "D":500,
             "M":1000
         }
-        res=num[s[-1]]
+        res=0
 
-        for i in range(len(s)-1):
-            if num[s[i]] < num[s[i+1]]:
+        for i in range(len(s)):
+            if i<len(s)-1 and num[s[i]] < num[s[i+1]]:
                 res-=num[s[i]]
             else:
                 res+=num[s[i]] 
